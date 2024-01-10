@@ -179,7 +179,10 @@ def printBTree(node, nodeInfo=None, inverted=False , isTop=True):
    treeLines = reversed(treeLines) if inverted and isTop else treeLines
 
    # return intermediate tree lines or print final result
-   if isTop :return "\n".join(treeLines)
+   if isTop :
+       value = "\n".join(treeLines)
+       print(value)
+       return ""
    else     : return treeLines
    
 def isBST(root):
@@ -780,8 +783,8 @@ class BinarySearchTree:
     def height(self):
         return height(self)
 
-    def __str__(self , inverted = False):
-        return printBTree(self , inverted = inverted)
+    def __str__(self):
+        return printBTree(self)
 
 # a = BinarySearchTree(50)
 # a.left = BinarySearchTree(8)
