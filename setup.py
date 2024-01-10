@@ -8,14 +8,13 @@ classifiers = [
   'Programming Language :: Python :: 3'
 ]
 
-with open("README.md" , "r") :
+with open("README.md" , "r") as f:
   long_description = f.read()
 
 setup(
   name='bstq',
   version='1.0.0',
   description='Comphrensive Library for Binary Search Trees.',
-  long_description=long_description,
   url='',  
   author='Om Kashyap',
   author_email='omkashyapcric@gmail.com',
