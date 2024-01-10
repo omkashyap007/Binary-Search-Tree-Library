@@ -1,8 +1,12 @@
 import random
 from collections import deque
-from exceptions import NotBinarySearchTreeObjectOrNone
 from collections import deque
 import functools as fn
+
+class NotBinarySearchTreeObjectOrNone(Exception):
+    def __init__(self):
+        super().__init__(self)
+        self.message = "The Object is not BinarySearchTree object or its not None"
 
 def inOrder(node):
     """
