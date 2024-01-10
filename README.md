@@ -135,7 +135,7 @@ Output :
 ```
 
 ### Printing Binary Tree
-You'll get the most prettiest display of Binary Search Tree .
+You will get the most prettiest display of Binary Search Tree .
 ```
 printBTree(bst) # global function
 print(bst)      # you can also use print function directly .
@@ -290,10 +290,10 @@ diameter_of_bst = diameterOfBST(bst)
 print(f"Diameter of Binary Search Tree: {diameter_of_bst}")
 
 kth_smallest = kThSmallestNode(bst , 6)
-print(f"k'th smallest node in Binary Search Tree :\n{kth_smallest}")
+print(f"k th smallest node in Binary Search Tree :\n{kth_smallest}")
 
 kth_largest = kThLargestNode(bst , 4)
-print(f"k'th largest node in Binary Search Tree: \n{kth_largest}")
+print(f"k th largest node in Binary Search Tree: \n{kth_largest}")
 
 min_element = findMinInBST(bst)
 print(f"Minimum value in BST : \n{min_element}")
@@ -311,12 +311,12 @@ Sum of nodes of the Binary Search Tree : 496
 
 Diameter of Binary Search Tree: 8
 
-k'th smallest node in Binary Search Tree :
+k th smallest node in Binary Search Tree :
   6
  / \
 5   7
 
-k'th largest node in Binary Search Tree:  
+k th largest node in Binary Search Tree:  
         28
      __/  \__
    26        30
