@@ -1,4 +1,4 @@
-# BSTq
+# [BSTq](https://github.com/omkashyap007/Binary-Search-Tree-Library/tree/master)
 
 BSTq is a comprehensive Python library dedicated to Binary Search Trees (BSTs). Designed to work with BSTs, this library offers a wide array of functions and utilities, rather than basic functions to work with binary search trees effortlessly. 
 
