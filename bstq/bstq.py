@@ -1,6 +1,5 @@
 import random
 from collections import deque
-from collections import deque
 import functools as fn
 
 class NotBinarySearchTreeObjectOrNone(Exception):

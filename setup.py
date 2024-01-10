@@ -7,12 +7,15 @@ classifiers = [
   'License :: OSI Approved :: MIT License',
   'Programming Language :: Python :: 3'
 ]
- 
+
+with open("README.md" , "r") :
+  long_description = f.read()
+
 setup(
   name='bstq',
   version='1.0.0',
   description='Comphrensive Library for Binary Search Trees.',
-  long_description=open('README.md').read() + '\n\n' + open('CHANGELOG.txt').read(),
+  long_description=long_description,
   url='',  
   author='Om Kashyap',
   author_email='omkashyapcric@gmail.com',
