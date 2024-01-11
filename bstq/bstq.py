@@ -726,12 +726,12 @@ class BSTSerializer:
     # for serialization 
 
     serializer = BSTSerializer()
-    serialized_tree_string = serializer.serializeBST(root)
+    serialized_tree_string = serializer.serialize(root)
 
     # for deserialization
 
     serializer = BSTSerializer()
-    tree_from_string = serializer.deSerializeBST(string)
+    tree_from_string = serializer.deSerialize(string)
 
     """
 
@@ -743,7 +743,7 @@ class BSTSerializer:
 
         eg :
         serializer = BSTSerializer()
-        serialized_string = serializer.serializeBST(root)
+        serialized_string = serializer.serialize(root)
         """
         stack = []
         serialize_pre_order = []
@@ -777,7 +777,7 @@ class BSTSerializer:
 
         eg :
         serializer = BSTSerializer()
-        serialized_string = serializer.deSerializeBST(string)
+        serialized_string = serializer.deSerialize(string)
         """
         l = string.split(".")
         self.index = 0
@@ -790,7 +790,7 @@ class BinarySearchTree:
     """
     Creates a Binary Search Tree object , takes a value for the instanciation .
 
-    takes a node value for the instanciation .
+    takes a node value for the instantiation .
 
     eg :
     root = BinarySearchTree(10)
@@ -874,7 +874,7 @@ class BinarySearchTree:
 # print(node)
 # invertBST(node)
 # print(node)
-node = createBSTWithHeight(5)
+# node = createBSTWithHeight(5)
 # print(node)
 # the_min = findMinInBST(node)
 # print(the_min)
