@@ -14,10 +14,9 @@ from bstq import *
 ```
 
 ### Creating Binary Search Tree
-
 The following class is used to create a BinarySearchTree and instanciate a tree object with root value  of 10 .
-```python
 
+```python
 class BinarySearchTree:
     def __init__(self , data , left = None, right = None) :
         self.data = data
@@ -31,14 +30,12 @@ root = BinarySearchTree(10)
 You have to provide a sorted list which you will paas in the `createBSTFromSortedList` , the function will return a root of the Binary Search Tree created from the list .
 
 ```python
-
 l = [11, 14, 36, 64, 69, 71, 83, 83] # sorted list.
-
 root = createBSTFromSortedList(l)
 print(root)
-
+```
 Output :
-
+```
 Sorted List : [11, 14, 36, 64, 69, 71, 83, 83]
         64
      __/  \__        
@@ -47,18 +44,15 @@ Sorted List : [11, 14, 36, 64, 69, 71, 83, 83]
 11    36  69    83   
                   \  
                    83
-
 ```
 ### Create Binary Search Tree With given Height .
-
 You can use `createBSTWithHeight` function to create BST with given height.
-
 ```
 bst = createBSTWithHeight(4)
 print(bst)
 ```
-```
 Output :
+```
               8
        ______/ \_____
       4              12
@@ -69,7 +63,7 @@ Output :
 
 ```
 
-## InOrder , PreOrder , PostOrder , LevelOrder Traversals .
+### InOrder , PreOrder , PostOrder , LevelOrder Traversals .
 There are two methods for traversals , one is class based which is specific to class and another is global method for bst.
 
 ```python
@@ -89,9 +83,8 @@ level_order = bst.levelOrder()    # class method
 level_order = levelOrder(bst)     # global method
 print(f"Level Order :  {level_order}")
 ```
-
-```
 Output :
+```
 In Order :  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 Pre Order :  [8, 4, 2, 1, 3, 6, 5, 7, 12, 10, 9, 11, 14, 13, 15]  
 Post Order :  [1, 3, 2, 5, 7, 6, 4, 9, 11, 10, 13, 15, 14, 12, 8] 
@@ -106,9 +99,8 @@ level_order_list = bst.levelOrderList()
 level_order_list = levelOrderList(bst)
 print(level_order_list)
 ```
-
-```
 Output :
+```
 [[8], [4, 12], [2, 6, 10, 14], [1, 3, 5, 7, 9, 11, 13, 15]]
 ```
 
@@ -123,24 +115,25 @@ Ouput :
  / \
 5   7
 ```
-
 ### Height of bst
 
 ```python
 h = bst.height()
 h = height(bst)
-
+```
 Output :
+```
 4
 ```
 
 ### Printing Binary Tree
 You will get the most prettiest display of Binary Search Tree .
-```
+```python
 printBTree(bst) # global function
 print(bst)      # you can also use print function directly .
-
+```
 Output :
+```
               8
        ______/ \_____
       4              12
@@ -156,9 +149,9 @@ You cannot use the print function , you have to use `printBTree()` with inverted
 
 ```python
 printBTree(bst , inverted = True)
-
+```
 Output :
-
+```
 1   3  5   7  9    11  13    15
  \ /    \ /    \  /      \  /  
   2      6      10        14   
@@ -166,7 +159,6 @@ Output :
       4              12        
        ¯¯¯¯¯¯\ /¯¯¯¯¯
               8
-
 ```
 
 ### Invert BST
@@ -174,7 +166,9 @@ Invertes the binary search tree to its mirror image .
 ```python
 inverted_tree = invertBST(bst)
 print(inverted_tree)
-
+```
+Output :
+```
                  8
           ______/ \______
         12               4
@@ -187,8 +181,9 @@ print(inverted_tree)
 ```python
 top_view = topViewOfBST(bst)
 print(top_view)
-
+```
 Output :
+```
 [1, 2, 4, 8, 12, 14, 15]
 ```
 ### Delete Node in BST
@@ -196,8 +191,9 @@ Gives and new node with delete bst and also deletes from the actual one.
 ```python
 new_bst = deleteNodeInBST(bst , 6)
 print(new_bst)
-
+```
 Output :
+```
            8
      _____/ \_____
     4             12
@@ -211,8 +207,9 @@ Output :
 ```python
 distance = findDistanceFromRoot(bst , 7)
 print(distance)
-
+```
 Output :
+```
 3
 ```
 
@@ -221,21 +218,24 @@ Output :
 ```python
 doubly_linked_list = bstToDLL(bst)
 print(doubly_linked_list)
-
+```
 Output :
+```
 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12 -> 13 -> 14 -> 15
 ```
 
 ### Linked List Enumeration
 The function `enumerateLinkedList(doubly_linked_list)` is used to enumerate through the linked list . It gives three items in the tuple of list that is (index , node , node_data)
+
 ```python
 new_bst = createBSTWithHeight(2)
 # created new bst with height of 2 .
 doubly_linked_list = bstToDLL(new_bst)
 for index , node , data in enumerateLinkedList(doubly_linked_list) :
     print(f"index : {index} , node : {node} , node data : {data}")
-
+```
 Output :
+```
 index : 0 , node : LinkedListNode(data = 1 , prev = . , next = 2) , node data : 1
 index : 1 , node : LinkedListNode(data = 2 , prev = 1 , next = 3) , node data : 2
 index : 2 , node : LinkedListNode(data = 3 , prev = 2 , next = .) , node data : 3
@@ -246,7 +246,6 @@ The library has `BSTSerializer` class which is used for Binary Tree Serializatio
 
 There are two functions in the class `serialize()` which returns a string of serialied binary serach tree and `deSerialize()` which returns the root of the deSerialized Binary Search Tree .
 ```python
-
 serializer = BSTSerializer()
 serialized_string = serializer.serialize(bst)
 print(f" Serialized BST String  : {serialized_string}") # serialized string
@@ -254,11 +253,10 @@ deserialized_bst = serializer.deSerialize(serialized_string) # root of the binar
 
 print(f"Deserialized Binary Search Tree ")
 print(deserialized_bst)
-
+```
 Output :
-
+```
 Serialized BST String  : 8.4.2.1.N.N.3.N.N.6.5.N.N.7.N.N.12.10.9.N.N.11.N.N.14.13.N.N.15.N
-
 Deserialized Binary Search Tree
               8
        ______/ \_____
@@ -279,6 +277,7 @@ There are more functions in the library to work with .
 `kThLargetElement` : The function gives the kth largest element in the bst. 
 `findMinInBST` : The function gives the smallest node in BST.
 `findMaxInBST` : The function gives the largest node in BST.
+
 ```python
 is_bst = isBST(bst)
 print(f"Is Bst : {is_bst}")
@@ -302,9 +301,8 @@ max_element = findMaxInBST(bst)
 print(f"Maximum value in BST : \n{max_element}")
 ```
 
-```python
 Output :
-
+```
 Is Bst : True
 
 Sum of nodes of the Binary Search Tree : 496
