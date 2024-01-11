@@ -109,8 +109,9 @@ Output :
 node = searchInBST(bst , 6)
 node = bst.searchInBST(6)
 print(node)
-
-Ouput :
+```
+Output :
+```
   6
  / \
 5   7
